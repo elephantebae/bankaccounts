@@ -1,0 +1,84 @@
+@using System;
+@using System.Collections.Generic;
+@using bankaccounts.Models;
+@model User;
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/css/style.css"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>Register</h1>
+            </div>
+            <form asp-action="Register" asp-controller="Home" method="post">
+                <div class="row">
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="FirstName">First Name</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input asp-for="FirstName" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <span asp-validation-for="LastName"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="LastName">Last Name</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input asp-for="LastName" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Email">Email Address</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input asp-for="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Password">Password</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input asp-for="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Confirm"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Confirm">Confirm Password</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input asp-for="Confirm" class="form-control">
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="/login">Already Registered?</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
